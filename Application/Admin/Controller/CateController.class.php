@@ -6,8 +6,9 @@ use Think\Controller;
 
 class CateController extends Controller
 {
-    public function index()
+    public function lists()
     {
+        $cate = D('cate');
         $this->display();
     }
 }
