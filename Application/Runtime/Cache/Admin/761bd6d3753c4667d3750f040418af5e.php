@@ -24,7 +24,7 @@
         <div class="topbar-logo-wrap clearfix">
             <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                <li><a class="on" href="index.html">首页</a></li>
+                <li><a class="on" href="/blog/index.php/Admin/Cate/lists">首页</a></li>
                 <li><a href="#" target="_blank">网站首页</a></li>
             </ul>
         </div>
@@ -32,7 +32,7 @@
             <ul class="top-info-list clearfix">
                 <li><a href="#">管理员</a></li>
                 <li><a href="#">修改密码</a></li>
-                <li><a href="#">退出</a></li>
+                <li><a href="/blog/index.php/Admin/Index/login">退出</a></li>
             </ul>
         </div>
     </div>
@@ -58,18 +58,18 @@
                 <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                 <ul class="sub-menu">
                     <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe008;</i>栏目管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe005;</i>博文管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe006;</i>分类管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe004;</i>留言管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe005;</i>博文管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe006;</i>分类管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe004;</i>留言管理</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
                 <ul class="sub-menu">
-                    <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe017;</i>系统设置</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe046;</i>数据备份</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe045;</i>数据还原</a></li>
                 </ul>
             </li>
         </ul>
@@ -123,34 +123,20 @@
                             <th>标题</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-<!--                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>-->
-                            <td>59</td>
-                            <td title="王怪兽"><a target="_blank" href="#" title="王怪兽">王怪兽</a> …
-                            </td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="58" type="checkbox"></td>
-<!--                            <td>
-                                <input name="ids[]" value="58" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>-->
-                            <td>58</td>
-                            <td title="王怪兽"><a target="_blank" href="#" title="王怪兽">王怪兽</a> …
-                            </td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        <?php if(is_array($cates)): $i = 0; $__LIST__ = $cates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                                <!--                            <td>
+                                                                <input name="ids[]" value="59" type="hidden">
+                                                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                                                            </td>-->
+                                <td><?php echo ($vo["cate_id"]); ?></td>
+                                <td title="王怪兽"><a target="_blank" href="#" title="王怪兽"><?php echo ($vo["cate_name"]); ?></a> …
+                                </td>
+                                <td>
+                                    <a class="link-update" href="#">修改</a>
+                                    <a class="link-del" href="/blog/index.php/Admin/Cate/del/id/<?php echo ($vo["cate_id"]); ?>" onclick="return confirm('你要删除栏目 <?php echo ($vo["cate_name"]); ?> 吗?');">删除</a>
+                                </td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
                     <div class="list-page"> 2 条 1/1 页</div>
                 </div>

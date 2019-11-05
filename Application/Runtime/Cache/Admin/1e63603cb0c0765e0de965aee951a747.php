@@ -23,7 +23,7 @@
         <div class="topbar-logo-wrap clearfix">
             <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                <li><a class="on" href="index.html">首页</a></li>
+                <li><a class="on" href="/blog/index.php/Admin/Cate/lists">首页</a></li>
                 <li><a href="#" target="_blank">网站首页</a></li>
             </ul>
         </div>
@@ -31,7 +31,7 @@
             <ul class="top-info-list clearfix">
                 <li><a href="#">管理员</a></li>
                 <li><a href="#">修改密码</a></li>
-                <li><a href="#">退出</a></li>
+                <li><a href="/blog/index.php/Admin/Index/login">退出</a></li>
             </ul>
         </div>
     </div>
@@ -57,18 +57,18 @@
                 <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                 <ul class="sub-menu">
                     <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe008;</i>栏目管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe005;</i>博文管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe006;</i>分类管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe004;</i>留言管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe005;</i>博文管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe006;</i>分类管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe004;</i>留言管理</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
                 <ul class="sub-menu">
-                    <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-                    <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe017;</i>系统设置</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe046;</i>数据备份</a></li>
+                    <li><a href="/blog/index.php/Admin/Cate/system"><i class="icon-font">&#xe045;</i>数据还原</a></li>
                 </ul>
             </li>
         </ul>
@@ -86,7 +86,7 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="" method="post" id="myform" name="myform"
+                <form action="/blog/index.php/Admin/Cate/add" method="post" id="myform" name="myform"
                       enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>

@@ -47,7 +47,7 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="__MODULE__/Cate/add"><i class="icon-font"></i>新增栏目</a>
+                        <a href="__CONTROLLER__/add"><i class="icon-font"></i>新增栏目</a>
                         <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
                     </div>
                 </div>
@@ -59,34 +59,22 @@
                             <th>标题</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-<!--                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>-->
-                            <td>59</td>
-                            <td title="王怪兽"><a target="_blank" href="#" title="王怪兽">王怪兽</a> …
-                            </td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="58" type="checkbox"></td>
-<!--                            <td>
-                                <input name="ids[]" value="58" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>-->
-                            <td>58</td>
-                            <td title="王怪兽"><a target="_blank" href="#" title="王怪兽">王怪兽</a> …
-                            </td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        <volist name="cates" id="vo">
+                            <tr>
+                                <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                                <!--                            <td>
+                                                                <input name="ids[]" value="59" type="hidden">
+                                                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                                                            </td>-->
+                                <td>{$vo.cate_id}</td>
+                                <td title="王怪兽"><a target="_blank" href="#" title="王怪兽">{$vo.cate_name}</a> …
+                                </td>
+                                <td>
+                                    <a class="link-update" href="#">修改</a>
+                                    <a class="link-del" href="__CONTROLLER__/del/id/{$vo.cate_id}" onclick="return confirm('你要删除栏目 {$vo.cate_name} 吗?');">删除</a>
+                                </td>
+                            </tr>
+                        </volist>
                     </table>
                     <div class="list-page"> 2 条 1/1 页</div>
                 </div>
