@@ -60,9 +60,6 @@
                     <li><a href="design.html"><i class="icon-font">&#xe005;</i>博文管理</a></li>
                     <li><a href="design.html"><i class="icon-font">&#xe006;</i>分类管理</a></li>
                     <li><a href="design.html"><i class="icon-font">&#xe004;</i>留言管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe012;</i>评论管理</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe052;</i>友情链接</a></li>
-                    <li><a href="design.html"><i class="icon-font">&#xe033;</i>广告管理</a></li>
                 </ul>
             </li>
             <li>
@@ -89,7 +86,7 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform"
+                <form action="" method="post" id="myform" name="myform"
                       enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
@@ -106,7 +103,7 @@
                         <tr>
                             <th><i class="require-red">*</i>栏目标题：</th>
                             <td>
-                                <input class="common-text required" id="title" name="title" size="50" value=""
+                                <input class="common-text required" id="title" name="cate_name" size="50" value=""
                                        type="text">
                             </td>
                         </tr>
