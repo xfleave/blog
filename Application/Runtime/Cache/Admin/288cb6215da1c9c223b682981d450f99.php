@@ -86,11 +86,11 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/blog/index.php/Admin/Cate/add" method="post" id="myform" name="myform"
+                <form action="/blog/index.php/Admin/First/add" method="post" id="myform" name="myform"
                       enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
-<!--                        <tr>
+                        <tr>
                             <th width="120"><i class="require-red">*</i>分类：</th>
                             <td>
                                 <select name="colId" id="catid" class="required">
@@ -99,7 +99,7 @@
                                     <option value="20">推荐界面</option>
                                 </select>
                             </td>
-                        </tr>-->
+                        </tr>
                         <tr>
                             <th><i class="require-red">*</i>栏目标题：</th>
                             <td>
@@ -107,21 +107,20 @@
                                        type="text">
                             </td>
                         </tr>
-                        <!--<tr>
+                        <<tr>
                             <th>作者：</th>
-                            <td><input class="common-text" name="author" size="50" value="admin" type="text"></td>
+                            <td><input class="common-text" name="author" size="50" value="" type="text"></td>
                         </tr>
                         <tr>
                             <th><i class="require-red">*</i>缩略图：</th>
                             <td><input name="smallimg" id="" type="file">
-                                &lt;!&ndash;<input type="submit" onclick="submitForm('/jscss/admin/design/upload')" value="上传图片"/>&ndash;&gt;
                             </td>
                         </tr>
                         <tr>
                             <th>内容：</th>
                             <td><textarea name="content" class="common-textarea" id="content" cols="30"
                                           style="width: 98%;" rows="10"></textarea></td>
-                        </tr>-->
+                        </tr>
                         <tr>
                             <th></th>
                             <td>

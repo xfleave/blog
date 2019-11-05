@@ -58,9 +58,9 @@
                 <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                 <ul class="sub-menu">
                     <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe008;</i>栏目管理</a></li>
-                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe005;</i>博文管理</a></li>
-                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe006;</i>分类管理</a></li>
-                    <li><a href="/blog/index.php/Admin/Cate/lists"><i class="icon-font">&#xe004;</i>留言管理</a></li>
+                    <li><a href="/blog/index.php/Admin/First/lists"><i class="icon-font">&#xe005;</i>首页管理</a></li>
+                    <li><a href="/blog/index.php/Admin/Article/lists"><i class="icon-font">&#xe006;</i>文章管理</a></li>
+                    <li><a href="/blog/index.php/Admin/About/lists"><i class="icon-font">&#xe004;</i>关于管理</a></li>
                 </ul>
             </li>
             <li>
