@@ -6,16 +6,17 @@ use Think\Controller;
 
 class CateController extends Controller
 {
-    public function del(){
-        $cate=D('cate');
-        if ($cate->delete(I('id'))){
-            $this->success("删除栏目成功",U('lists'));
-        }else{
+    public function del()
+    {
+        $cate = D('cate');
+        if ($cate->delete(I('id'))) {
+            $this->success("删除栏目成功", U('lists'));
+        } else {
             $this->error('删除栏目失败');
         }
-        return;
 
     }
+
     public function add()
     {
         $cate = D('cate');
@@ -41,6 +42,29 @@ class CateController extends Controller
         $cate = D('cate');
         $cates = $cate->select();
         $this->assign('cates', $cates);
+        $this->display();
+    }
+
+    public function edit()
+    {
+        $cate = D('cate');
+        if (IS_POST) {
+            $data['cate_id'] = I('cate_id');
+            $data['cate_name'] = I('cate_name');
+            if ($cate->create($data)) {
+                if ($cate->save()) {
+                    $this->success('修改栏目成功', U('lists'));
+                } else {
+                    $this->error('修改栏目失败');
+                }
+            } else {
+                $this->error($cate->getError());
+            }
+            return;
+        }
+        $cateid = I('id');
+        $caters = $cate->find($cateid);
+        $this->assign('caters', $caters);
         $this->display();
     }
 
