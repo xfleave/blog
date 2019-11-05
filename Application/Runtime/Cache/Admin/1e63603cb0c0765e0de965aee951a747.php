@@ -8,7 +8,6 @@
     <script type="text/javascript" src="/blog/Public/Admin/js/libs/modernizr.min.js"></script>
 </head>
 <body>
-<!--header-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,37 +81,63 @@
 </html>
     <!--/sidebar-->
     <div class="main-wrap">
+
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>后台管理<span></span></span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span
+                    class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span
+                    class="crumb-step">&gt;</span><span>新增作品</span></div>
         </div>
         <div class="result-wrap">
-            <div class="result-title">
-                <h1>快捷操作</h1>
-            </div>
             <div class="result-content">
-                <div class="short-wrap">
-                    <a href="#"><i class="icon-font">&#xe001;</i>新增栏目</a>
-                    <a href="#"><i class="icon-font">&#xe005;</i>新增博文</a>
-                    <a href="#"><i class="icon-font">&#xe048;</i>新增作品分类</a>
-                    <a href="#"><i class="icon-font">&#xe041;</i>新增博客分类</a>
-                    <a href="#"><i class="icon-font">&#xe01e;</i>作品评论</a>
-                </div>
+                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform"
+                      enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+<!--                        <tr>
+                            <th width="120"><i class="require-red">*</i>分类：</th>
+                            <td>
+                                <select name="colId" id="catid" class="required">
+                                    <option value="">请选择</option>
+                                    <option value="19">精品界面</option>
+                                    <option value="20">推荐界面</option>
+                                </select>
+                            </td>
+                        </tr>-->
+                        <tr>
+                            <th><i class="require-red">*</i>栏目标题：</th>
+                            <td>
+                                <input class="common-text required" id="title" name="title" size="50" value=""
+                                       type="text">
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <th>作者：</th>
+                            <td><input class="common-text" name="author" size="50" value="admin" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>缩略图：</th>
+                            <td><input name="smallimg" id="" type="file">
+                                &lt;!&ndash;<input type="submit" onclick="submitForm('/jscss/admin/design/upload')" value="上传图片"/>&ndash;&gt;
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>内容：</th>
+                            <td><textarea name="content" class="common-textarea" id="content" cols="30"
+                                          style="width: 98%;" rows="10"></textarea></td>
+                        </tr>-->
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
             </div>
         </div>
 
-        <div class="result-wrap">
-            <div class="result-title">
-                <h1>使用帮助</h1>
-            </div>
-            <div class="result-content">
-                <ul class="sys-info-list">
-                    <li>
-                        <label class="res-lab">王怪兽交流群：</label><span class="res-info">592958763</span>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
     </div>
     <!--/main-->
 </div>

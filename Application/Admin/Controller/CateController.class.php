@@ -8,7 +8,9 @@ class CateController extends Controller
 {
     public function lists()
     {
-        $cate = D('cate');
         $this->display();
+    }
+    public function add(){
+
     }
 }
