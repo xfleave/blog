@@ -1,0 +1,38 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录</title>
+    <link href="/blog/Public/Admin/css/admin_login.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="admin_login_wrap">
+    <h1>后台管理</h1>
+    <div class="adming_login_border">
+        <div class="admin_input">
+            <form action="index.html" method="post">
+                <ul class="admin_items">
+                    <li>
+                        <label for="user">用户名：<input type="text" name="u_name" value="" id="user" size="35"
+                                                     class="admin_input_style"/></label>
+
+                    </li>
+                    <li>
+                        <label for="pwd">密码：<input type="password" name="u_password" value="" id="pwd" size="35"
+                                                   class="admin_input_style"/></label>
+                    </li>
+                    <li>
+                        <label for="sex">性别：<input type="radio" name="u_sex" value="0" id="sex" size="35" checked="checked"/>男
+                            <input type="radio" name="u_sex" value="1" size="35"/>女
+                        </label>
+                    </li>
+                    <li>
+                        <input type="submit" tabindex="3" value="注册" class="btn btn-primary"/>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

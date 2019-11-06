@@ -111,7 +111,7 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="/blog/index.php/Admin/First/add"><i class="icon-font"></i>新增栏目</a>
+                        <a href="/blog/index.php/Admin/First/add"><i class="icon-font"></i>新增首页</a>
                         <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
                     </div>
                 </div>
@@ -121,20 +121,35 @@
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>ID</th>
                             <th>标题</th>
+                            <td>图片</td>
+                            <th>内容</th>
+                            <th>更新时间</th>
                             <th>操作</th>
                         </tr>
-                        <?php if(is_array($cates)): $i = 0; $__LIST__ = $cates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <?php if(is_array($firsts)): $i = 0; $__LIST__ = $firsts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i;?><tr>
                                 <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                                 <!--                            <td>
                                                                 <input name="ids[]" value="59" type="hidden">
                                                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                                                             </td>-->
-                                <td><?php echo ($vo["cate_id"]); ?></td>
-                                <td title="王怪兽"><a target="_blank" href="#" title="王怪兽"><?php echo ($vo["cate_name"]); ?></a> …
+                                <td><?php echo ($f["f_id"]); ?></td>
+                                <td title="<?php echo ($f["f_title"]); ?>"><a target="_blank" href="#"
+                                                            title="<?php echo ($f["f_title"]); ?>"><?php echo ($f["f_title"]); ?></a> …
                                 </td>
                                 <td>
-                                    <a class="link-update" href="/blog/index.php/Admin/First/edit/id/<?php echo ($vo["cate_id"]); ?>">修改</a>
-                                    <a class="link-del" href="/blog/index.php/Admin/First/del/id/<?php echo ($vo["cate_id"]); ?>" onclick="return confirm('你要删除栏目 <?php echo ($vo["cate_name"]); ?> 吗?');">删除</a>
+
+                                    <?php if($f['f_pic'] != null): ?><img src="/blog/<?php echo ($f["f_pic"]); ?>" height="35"/>
+                                        <?php else: ?>
+                                        暂无图片<?php endif; ?>
+                                </td>
+                                <td><?php echo ($f["f_content"]); ?></td>
+                                <td>
+                                    date("Y-m-d H:i:s",<?php echo ($f["time"]); ?>)
+                                </td>
+                                <td>
+                                    <a class="link-update" href="#">修改</a>
+                                    <a class="link-del" href="/blog/index.php/Admin/First/del/id/<?php echo ($f["f_id"]); ?>"
+                                       onclick="return confirm('你要删除 <?php echo ($f["f_title"]); ?> 吗?');">删除</a>
                                 </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>

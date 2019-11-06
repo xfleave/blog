@@ -82,7 +82,7 @@
         <div class="crumb-wrap">
             <div class="crumb-list"><i class="icon-font"></i><a href="/blog/index.php/Admin/Index/index">首页</a><span
                     class="crumb-step">&gt;</span><a class="crumb-name" href="/blog/index.php/Admin/Index/index">作品管理</a><span
-                    class="crumb-step">&gt;</span><span>新增作品</span></div>
+                    class="crumb-step">&gt;</span><span>新增首页</span></div>
         </div>
         <div class="result-wrap">
             <div class="result-content">
@@ -91,34 +91,20 @@
                     <table class="insert-tab" width="100%">
                         <tbody>
                         <tr>
-                            <th width="120"><i class="require-red">*</i>分类：</th>
+                            <th><i class="require-red">*</i>首页标题：</th>
                             <td>
-                                <select name="colId" id="catid" class="required">
-                                    <option value="">请选择</option>
-                                    <option value="19">精品界面</option>
-                                    <option value="20">推荐界面</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><i class="require-red">*</i>栏目标题：</th>
-                            <td>
-                                <input class="common-text required" id="title" name="cate_name" size="50" value=""
+                                <input class="common-text required" id="title" name="f_title" size="50" value=""
                                        type="text">
                             </td>
                         </tr>
-                        <<tr>
-                            <th>作者：</th>
-                            <td><input class="common-text" name="author" size="50" value="" type="text"></td>
-                        </tr>
                         <tr>
                             <th><i class="require-red">*</i>缩略图：</th>
-                            <td><input name="smallimg" id="" type="file">
+                            <td><input name="f_pic" id="" type="file">
                             </td>
                         </tr>
                         <tr>
                             <th>内容：</th>
-                            <td><textarea name="content" class="common-textarea" id="content" cols="30"
+                            <td><textarea name="f_content" class="common-textarea" id="content" cols="30"
                                           style="width: 98%;" rows="10"></textarea></td>
                         </tr>
                         <tr>
